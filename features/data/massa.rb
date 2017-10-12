@@ -1,6 +1,6 @@
 #encoding: utf-8
 
-MASSA ={
+MASSA = {
     veiculo_valida: {
         letra: "JQF",
         numero: "8956"
