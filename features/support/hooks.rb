@@ -1,5 +1,4 @@
 Before do |scenario|
-
     scenario_tags = scenario.source_tag_names
     if scenario_tags.include?('@reinstall')
         reinstall_apps
@@ -14,7 +13,6 @@ Before do |scenario|
     end
 
     start_test_server_in_background if server != 1
-
 end
 
 After do |scenario|
