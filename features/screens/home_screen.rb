@@ -19,15 +19,15 @@ class Detran < Calabash::ABase
 
     def tela_inicial_carregou?
         begin
-            when_element_exists @botao_fechar_propaganda, :timeout => 25, :action => lambda { touch(@botao_fechar_propaganda)}
-            wait_for_elements_exist @tela_inicial, :timeout => 10
+            when_element_exists @botao_fechar_propaganda, :timeout => 25, :action => lambda { touch(@botao_fechar_propaganda)}, :screenshot_on_error => false
+            wait_for_elements_exist @tela_inicial, :timeout => 10, :screenshot_on_error => false
         rescue
-            wait_for_elements_exist @tela_inicial, :timeout => 10
+            wait_for_elements_exist @tela_inicial, :timeout => 10, :screenshot_on_error => false
         end
     end
 
     def alerta_invalido
-        wait_for_elements_exist @msg_placa_invalida, :timeout => 5
+        wait_for_elements_exist @msg_placa_invalida, :timeout => 5, :screenshot_on_error => false
     end
 
     def pesquisar_placa(placa_veiculo)
@@ -36,7 +36,7 @@ class Detran < Calabash::ABase
     end
 
     def valida_consulta
-        wait_for_elements_exist @texto_placa, :timeout => 20
+        wait_for_elements_exist @texto_placa, :timeout => 20, :screenshot_on_error => false
         placa = query @texto_placa, :text
         placa_valida(placa[0])
     end
@@ -52,6 +52,6 @@ class Detran < Calabash::ABase
         arq.write placa + " \n"
         arq.close unless arq.closed?
     end
-    
+
 end
 
