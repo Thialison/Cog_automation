@@ -36,6 +36,6 @@ gem install calabash-android
 2. Emulando android virtual device: 
    emulator @"<Nome do seu emulator>"&
 
-3. Executando feature calculo de triangulo: 
+3. Executando feature: 
    calabash-android run Consulta_Placa.apk features/consultar_veiculo.feature
 ```
