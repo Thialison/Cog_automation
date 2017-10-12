@@ -1,0 +1,5 @@
+require 'calabash-android/cucumber'
+require 'calabash-android/management/adb'
+require 'calabash-android/operations'
+require 'calabash-android/calabash_steps'
+require 'calabash-android/abase'
